@@ -66,7 +66,7 @@ def generate_chart(site_dropdown):
             [Input(component_id = 'site-dropdown', component_property = 'value'), 
             Input(component_id = 'payload-slider', component_property = 'value')])
 #This is for generating the payload scatter graph.
-def generate_chart(payload_slider, site_dropdown):
+def generate_chart(site_dropdown, payload_slider):
     if site_dropdown == 'ALL':
         fig = px.scatter(spacex_df, x = 'Payload Mass (kg)', y = 'class', color = "Booster Version Category")
         return fig
